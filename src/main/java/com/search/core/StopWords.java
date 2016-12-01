@@ -3,6 +3,7 @@ package com.search.core;
 /**
  * Created by murugesm on 11/29/16.
  */
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,14 +14,16 @@ public class StopWords
     public static Set<String> stopWordSet = new HashSet<String>(Arrays.asList(stopwords));
     public static Set<String> stemmedStopWordSet = stemStringSet(stopWordSet);
 
-    public static boolean isStopword(String word) {
+    public static boolean isStopword(String word)
+    {
         if(word.length() < 2) return true;
         if(word.charAt(0) >= '0' && word.charAt(0) <= '9') return true; //remove numbers, "25th", etc
         if(stopWordSet.contains(word)) return true;
         else return false;
     }
 
-    public static boolean isStemmedStopword(String word) {
+    public static boolean isStemmedStopword(String word)
+    {
         if(word.length() < 2) return true;
         if(word.charAt(0) >= '0' && word.charAt(0) <= '9') return true; //remove numbers, "25th", etc
         String stemmed = stemString(word);
@@ -31,10 +34,12 @@ public class StopWords
         else return false;
     }
 
-    public static String removeStopWords(String string) {
+    public static String removeStopWords(String string)
+    {
         String result = "";
         String[] words = string.split("\\s+");
-        for(String word : words) {
+        for(String word : words)
+        {
             if(word.isEmpty()) continue;
             if(isStopword(word)) continue; //remove stopwords
             result += (word+" ");
@@ -42,10 +47,12 @@ public class StopWords
         return result;
     }
 
-    public static String removeStemmedStopWords(String string) {
+    public static String removeStemmedStopWords(String string)
+    {
         String result = "";
         String[] words = string.split("\\s+");
-        for(String word : words) {
+        for(String word : words)
+        {
             if(word.isEmpty()) continue;
             if(isStemmedStopword(word)) continue;
             if(word.charAt(0) >= '0' && word.charAt(0) <= '9') continue; //remove numbers, "25th", etc
@@ -54,14 +61,17 @@ public class StopWords
         return result;
     }
 
-    public static String stemString(String string) {
+    public static String stemString(String string)
+    {
         return new Stemmer().stem(string);
     }
 
-    public static Set<String> stemStringSet(Set<String> stringSet) {
+    public static Set<String> stemStringSet(Set<String> stringSet)
+    {
         Stemmer stemmer = new Stemmer();
         Set<String> results = new HashSet<String>();
-        for(String string : stringSet) {
+        for(String string : stringSet)
+        {
             results.add(stemmer.stem(string));
         }
         return results;

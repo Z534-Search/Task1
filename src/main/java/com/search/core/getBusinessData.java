@@ -9,6 +9,8 @@ import com.mongodb.MongoClient;
 import com.search.core.objectStructure.Business;
 
 import java.net.UnknownHostException;
+import java.util.HashSet;
+
 /**
  * Created by murugesm on 11/29/16.
  */
@@ -38,22 +40,38 @@ public class getBusinessData
         DBCollection business = db.getCollection("business");
         DBCursor cursor = business.find();
 
-
-        for(int i=0; i < 5; i++)
+        HashSet<String> businessCategories = new HashSet<>();
+        //for(int i=0; i < 5; i++)
         {
-            if(cursor.hasNext())
+            while(cursor.hasNext())
             {
                 json = cursor.next().toString();
                 json = json.replaceAll("_","");
                 json = json.replaceAll("-","");
                 Gson gson = new Gson();
                 Business business1 = gson.fromJson(json, Business.class);
-                System.out.println("\n\n");
-                System.out.println(business1.getName());
-                getReviewData.getReviews(business1.getBusinessid());
+                String[] categories = business1.getCategories();
+                int a =1;
+                /*for(String category: categories)
+                {
+                    if(category.contains("Restaurants"))
+                    {
+                        for()
+                        System.out.print(categories);
+                    }
+                }*/
+
+                //System.out.println("\n\n");
+                //System.out.println(business1.getName());
+                //getReviewData.getReviews(business1.getBusinessid());
                 //System.out.println(business1.getBusinessid());
                 //System.out.println(json);
             }
+        }
+
+        for(String category: businessCategories)
+        {
+            System.out.println(category);
         }
 
         return new String[]{};
