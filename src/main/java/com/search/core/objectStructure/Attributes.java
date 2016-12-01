@@ -7,39 +7,39 @@ public class Attributes
 {
     private String Alcohol;
 
-    private String Waiter_Service;
+    private String WaiterService;
 
     private String Delivery;
 
     private String Attire;
 
-    private String Good_for_Kids;
+    private String GoodforKids;
 
-    private String Drive_Thru;
+    private String DriveThru;
 
     private Parking Parking;
 
-    private String Take_out;
+    private String Takeout;
 
-    private String Accepts_Credit_Cards;
+    private String AcceptsCreditCards;
 
-    private String Price_Range;
+    private String PriceRange;
 
-    private String Takes_Reservations;
+    private String TakesReservations;
 
     private String Caters;
 
-    private String Noise_Level;
+    private String NoiseLevel;
 
     private Ambience Ambience;
 
-    private GoodFor Good_For;
+    private GoodFor GoodFor;
 
-    private String Has_TV;
+    private String HasTV;
 
-    private String Good_For_Groups;
+    private String GoodForGroups;
 
-    private String Outdoor_Seating;
+    private String OutdoorSeating;
 
     public String getAlcohol ()
     {
@@ -51,14 +51,14 @@ public class Attributes
         this.Alcohol = Alcohol;
     }
 
-    public String getWaiter_Service ()
+    public String getWaiterService ()
 {
-    return Waiter_Service;
+    return WaiterService;
 }
 
-    public void setWaiter_Service (String Waiter_Service)
+    public void setWaiterService (String WaiterService)
 {
-    this.Waiter_Service = Waiter_Service;
+    this.WaiterService = WaiterService;
 }
 
     public String getDelivery ()
@@ -81,24 +81,24 @@ public class Attributes
         this.Attire = Attire;
     }
 
-    public String getGood_for_Kids ()
+    public String getGoodforKids ()
 {
-    return Good_for_Kids;
+    return GoodforKids;
 }
 
-    public void setGood_for_Kids (String Good_for_Kids)
+    public void setGoodforKids (String GoodforKids)
 {
-    this.Good_for_Kids = Good_for_Kids;
+    this.GoodforKids = GoodforKids;
 }
 
-    public String getDrive_Thru ()
+    public String getDriveThru ()
 {
-    return Drive_Thru;
+    return DriveThru;
 }
 
-    public void setDrive_Thru (String Drive_Thru)
+    public void setDriveThru (String DriveThru)
 {
-    this.Drive_Thru = Drive_Thru;
+    this.DriveThru = DriveThru;
 }
 
     public Parking getParking ()
@@ -111,44 +111,44 @@ public class Attributes
         this.Parking = Parking;
     }
 
-    public String getTake_out ()
+    public String getTakeout ()
 {
-    return Take_out;
+    return Takeout;
 }
 
-    public void setTake_out (String Take_out)
+    public void setTakeout (String Takeout)
 {
-    this.Take_out = Take_out;
+    this.Takeout = Takeout;
 }
 
-    public String getAccepts_Credit_Cards ()
+    public String getAcceptsCreditCards ()
 {
-    return Accepts_Credit_Cards;
+    return AcceptsCreditCards;
 }
 
-    public void setAccepts_Credit_Cards (String Accepts_Credit_Cards)
+    public void setAcceptsCreditCards (String AcceptsCreditCards)
 {
-    this.Accepts_Credit_Cards = Accepts_Credit_Cards;
+    this.AcceptsCreditCards = AcceptsCreditCards;
 }
 
-    public String getPrice_Range ()
+    public String getPriceRange ()
 {
-    return Price_Range;
+    return PriceRange;
 }
 
-    public void setPrice_Range (String Price_Range)
+    public void setPriceRange (String PriceRange)
 {
-    this.Price_Range = Price_Range;
+    this.PriceRange = PriceRange;
 }
 
-    public String getTakes_Reservations ()
+    public String getTakesReservations ()
 {
-    return Takes_Reservations;
+    return TakesReservations;
 }
 
-    public void setTakes_Reservations (String Takes_Reservations)
+    public void setTakesReservations (String TakesReservations)
 {
-    this.Takes_Reservations = Takes_Reservations;
+    this.TakesReservations = TakesReservations;
 }
 
     public String getCaters ()
@@ -161,14 +161,14 @@ public class Attributes
         this.Caters = Caters;
     }
 
-    public String getNoise_Level ()
+    public String getNoiseLevel ()
 {
-    return Noise_Level;
+    return NoiseLevel;
 }
 
-    public void setNoise_Level (String Noise_Level)
+    public void setNoiseLevel (String NoiseLevel)
 {
-    this.Noise_Level = Noise_Level;
+    this.NoiseLevel = NoiseLevel;
 }
 
     public Ambience getAmbience ()
@@ -181,49 +181,49 @@ public class Attributes
         this.Ambience = Ambience;
     }
 
-    public GoodFor getGood_For ()
+    public GoodFor getGoodFor ()
 {
-    return Good_For;
+    return GoodFor;
 }
 
-    public void setGood_For (GoodFor Good_For)
+    public void setGoodFor (GoodFor GoodFor)
 {
-    this.Good_For = Good_For;
+    this.GoodFor = GoodFor;
 }
 
-    public String getHas_TV ()
+    public String getHasTV ()
 {
-    return Has_TV;
+    return HasTV;
 }
 
-    public void setHas_TV (String Has_TV)
+    public void setHasTV (String HasTV)
 {
-    this.Has_TV = Has_TV;
+    this.HasTV = HasTV;
 }
 
-    public String getGood_For_Groups ()
+    public String getGoodForGroups ()
 {
-    return Good_For_Groups;
+    return GoodForGroups;
 }
 
-    public void setGood_For_Groups (String Good_For_Groups)
+    public void setGoodForGroups (String GoodForGroups)
 {
-    this.Good_For_Groups = Good_For_Groups;
+    this.GoodForGroups = GoodForGroups;
 }
 
-    public String getOutdoor_Seating ()
+    public String getOutdoorSeating ()
 {
-    return Outdoor_Seating;
+    return OutdoorSeating;
 }
 
-    public void setOutdoor_Seating (String Outdoor_Seating)
+    public void setOutdoorSeating (String OutdoorSeating)
 {
-    this.Outdoor_Seating = Outdoor_Seating;
+    this.OutdoorSeating = OutdoorSeating;
 }
 
     @Override
     public String toString()
     {
-        return "Attributes [Alcohol = "+Alcohol+", Waiter_Service = "+Waiter_Service+", Delivery = "+Delivery+", Attire = "+Attire+", Good_for_Kids = "+Good_for_Kids+", Drive_Thru = "+Drive_Thru+", Parking = "+Parking+", Take_out = "+Take_out+", Accepts_Credit_Cards = "+Accepts_Credit_Cards+", Price_Range = "+Price_Range+", Takes_Reservations = "+Takes_Reservations+", Caters = "+Caters+", Noise_Level = "+Noise_Level+", Ambience = "+Ambience+", Good_For = "+Good_For+", Has_TV = "+Has_TV+", Good_For_Groups = "+Good_For_Groups+", Outdoor_Seating = "+Outdoor_Seating+"]";
+        return "Attributes [Alcohol = "+Alcohol+", WaiterService = "+WaiterService+", Delivery = "+Delivery+", Attire = "+Attire+", GoodforKids = "+GoodforKids+", DriveThru = "+DriveThru+", Parking = "+Parking+", Takeout = "+Takeout+", AcceptsCreditCards = "+AcceptsCreditCards+", PriceRange = "+PriceRange+", TakesReservations = "+TakesReservations+", Caters = "+Caters+", NoiseLevel = "+NoiseLevel+", Ambience = "+Ambience+", GoodFor = "+GoodFor+", HasTV = "+HasTV+", GoodForGroups = "+GoodForGroups+", OutdoorSeating = "+OutdoorSeating+"]";
     }
 }
