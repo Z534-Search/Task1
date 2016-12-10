@@ -57,11 +57,11 @@ public class ImportDataToMongo
         {
             MongoClient mongo = new MongoClient("localhost", 27017);
 
-            DB db = mongo.getDB("testdb");
+            DB db = mongo.getDB("yelp_dataset");
 
-            insert("/Users/murugesm/Downloads/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json",db,"business");
+            //insert("/u/murugesm/Search/target/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json",db,"business");
 
-            insert("/Users/murugesm/Downloads/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json",db,"review");
+            //insert("/u/murugesm/Search/target/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json",db,"review");
 
             System.out.println("Done inserting values into Mongo");
         }
