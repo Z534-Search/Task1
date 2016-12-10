@@ -8,4 +8,4 @@ ILS - Z534 Search Project on Yelp Dataset Challenge
 * [Vikrant Kaushal](https://github.com/KaushalVikrant) (vkaushal@indiana.edu)  
 * [Yash Sumant Ketkar](https://github.com/yashketkar) (yketkar@indiana.edu)
 
-## Task1
+## Task 1
