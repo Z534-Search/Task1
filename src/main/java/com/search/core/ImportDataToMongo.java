@@ -51,7 +51,7 @@ public class ImportDataToMongo
         }
         System.out.println("Inserted "+Integer.toString(newColl.find().count()) + " rows into the table " + newColl.toString());
     }
-    public static void main()
+    public static void main(String path)
     {
         try
         {
@@ -59,11 +59,11 @@ public class ImportDataToMongo
 
             DB db = mongo.getDB("yelp_dataset");
 
-            insert("/u/murugesm/Search/target/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json",db,"business");
+            insert(path+"/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json",db,"business");
 
-            insert("/u/murugesm/Search/target/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json",db,"review");
+            insert(path+"/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json",db,"review");
 
-            insert("/u/murugesm/Search/target/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json",db,"tip");
+            insert(path+"/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json",db,"tip");
 
             System.out.println("Done inserting values into Mongo");
         }
