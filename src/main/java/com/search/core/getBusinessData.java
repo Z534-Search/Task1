@@ -95,16 +95,16 @@ public class getBusinessData implements Runnable
                     }
                 }
 
-                String reviewData = null;
+                String textData = null;
                 try
                 {
-                    reviewData = getReviewData.getReviews(db, business1.getBusinessid());
+                    textData = getReviewData.getReviews(db, business1.getBusinessid()) + " " + getTipData.getTips(db, business1.getBusinessid());
                 }
                 catch (UnknownHostException e)
                 {
                     e.printStackTrace();
                 }
-                extractFeatures(mainIndexBuilder, mainCategories, business1.getName(), reviewData);
+                extractFeatures(mainIndexBuilder, mainCategories, business1.getName(), textData);
 
                 writeLine("Finished Training " + business1.getName());
             }
@@ -129,18 +129,18 @@ public class getBusinessData implements Runnable
                     }
                 }
 
-                String reviewData = null;
+                String textData = null;
 
                 try
                 {
-                    reviewData = getReviewData.getReviews(db, business1.getBusinessid());
+                    textData = getReviewData.getReviews(db, business1.getBusinessid()) + " " + getTipData.getTips(db, business1.getBusinessid());
                 }
                 catch (UnknownHostException e)
                 {
                     e.printStackTrace();
                 }
 
-                extractFeaturesTest(testIndexBuilder, mainCategories, business1.getName(), reviewData);
+                extractFeaturesTest(testIndexBuilder, mainCategories, business1.getName(), textData);
 
                 writeLine("Testing " + business1.getName());
             }
@@ -289,8 +289,6 @@ public class getBusinessData implements Runnable
                 ClassifierRangeWithScore value = next.getValue();
 
                 map.put(categoryDB.getCategoryName(next.getKey()), value.score);
-
-                //writeLine(docName + " " + categoryDB.getCategoryName(next.getKey()) + " " + value.score);
             }
 
             writer.print("'"+docName+"'");
