@@ -87,11 +87,6 @@
             <artifactId>jatecs-gpl</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>net.sf</groupId>
-            <artifactId>javaml</artifactId>
-            <version>0.1.7</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>

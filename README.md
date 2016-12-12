@@ -47,3 +47,34 @@ Then from the model, the program goes through the test dataset which classifies 
 9) **generateGroundTruth** - This class contains the method which generates the ground truth which helps us determine the accuracy of the data classified.
 
 All the classes inside the folder objectStructure contain a class with a structure similar to Business, Review and Tip information so that these can be read into these classes.
+
+## Steps to run the program:
+
+1) Make sure that MongoDB is running
+
+2) Navigate to the Task1 folder and run the following command:
+
+    **mvn clean compile assembly:single**
+
+   This makes sure that the JAR file with all the dependencies are created.
+
+3) Then navigate into the Target folder where the JAR file is located and run the following command:
+
+    **java -cp project-1.0-SNAPSHOT-jar-with-dependencies.jar com.search.core.App <Path>**
+
+   <Path> is the directory where the Yelp Dataset is located.
+
+   Sample command:
+    
+    **java -cp project-1.0-SNAPSHOT-jar-with-dependencies.jar com.search.core.App /Users/murugesm/Downloads**
+
+   This command would trigger the main application and it would create three files:
+    a. groundtruth.txt – File which contains the ground truth
+    b. output.txt - File which contains the output for Naïve Bayes
+    c. output-svm.txt - File which contains the output for SVM
+
+4) To compare the output with the ground truth, then run the scorer function with the following command:
+
+    **python3 scorer.py <Path to groundtruth.txt> <Path to output file>**
+
+   This would give us the accuracy of the program.
