@@ -9,7 +9,7 @@ public class App
         try
         {
             System.out.println("Inserting Data into Mongo");
-            ImportDataToMongo.main();
+            ImportDataToMongo.main(args[0]);
         }
         catch (Exception e)
         {
@@ -17,5 +17,7 @@ public class App
         }
 
         getBusinessData.getJSON();
+
+        SVMVersion.getJSON();
     }
 }
