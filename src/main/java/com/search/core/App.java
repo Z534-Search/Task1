@@ -19,5 +19,7 @@ public class App
         getBusinessData.getJSON();
 
         SVMVersion.getJSON();
+
+        generateGroundTruth.writeTruth();
     }
 }

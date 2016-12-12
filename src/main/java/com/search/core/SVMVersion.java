@@ -202,7 +202,7 @@ public class SVMVersion implements Runnable
             for(int p=0; p < numOfProcessors; p++)
             {
                 cursors[p] = business.find().limit(window).skip(window * p);
-                com.search.core.getBusinessData objClass = new com.search.core.getBusinessData(cursors[p], db, "train");
+                com.search.core.SVMVersion objClass = new com.search.core.SVMVersion(cursors[p], db, "train");
                 threads[p] = new Thread(objClass, p + "");
                 threads[p].start();
             }
@@ -237,7 +237,7 @@ public class SVMVersion implements Runnable
             {
                 cursorsTest[p] = business.find().limit(window).skip(window * p);
                 //    cursors[p] = business.find().limit((totalTests) - (window * p)).skip(window * p);
-                com.search.core.getBusinessData objClass = new com.search.core.getBusinessData(cursorsTest[p], db, "test");
+                com.search.core.SVMVersion objClass = new com.search.core.SVMVersion(cursorsTest[p], db, "test");
                 threadsTest[p] = new Thread(objClass, p + "");
                 threadsTest[p].start();
             }
