@@ -54,19 +54,19 @@ All the classes inside the folder objectStructure contain a class with a structu
 
 2) Navigate to the Task1 folder and run the following command:
 
-    **mvn clean compile assembly:single**
+    mvn clean compile assembly:single
 
    This makes sure that the JAR file with all the dependencies are created.
 
 3) Then navigate into the Target folder where the JAR file is located and run the following command:
 
-    **java -cp project-1.0-SNAPSHOT-jar-with-dependencies.jar com.search.core.App <Path>**
+    java -cp project-1.0-SNAPSHOT-jar-with-dependencies.jar com.search.core.App <Path>
 
    <Path> is the directory where the Yelp Dataset is located.
 
    Sample command:
     
-    **java -cp project-1.0-SNAPSHOT-jar-with-dependencies.jar com.search.core.App /Users/murugesm/Downloads**
+    java -cp project-1.0-SNAPSHOT-jar-with-dependencies.jar com.search.core.App /Users/murugesm/Downloads
 
    This command would trigger the main application and it would create three files:
     a. groundtruth.txt – File which contains the ground truth
@@ -75,6 +75,6 @@ All the classes inside the folder objectStructure contain a class with a structu
 
 4) To compare the output with the ground truth, then run the scorer function with the following command:
 
-    **python3 scorer.py <Path to groundtruth.txt> <Path to output file>**
+    python3 scorer.py <Path to groundtruth.txt> <Path to output file>
 
    This would give us the accuracy of the program.
