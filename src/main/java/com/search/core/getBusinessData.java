@@ -98,7 +98,7 @@ public class getBusinessData implements Runnable
                 String textData = null;
                 try
                 {
-                    textData = getReviewData.getReviews(db, business1.getBusinessid()) + " " + getTipData.getTips(db, business1.getBusinessid());
+                    textData = getReviewData.getReviews(db, business1.getBusinessid());
                 }
                 catch (UnknownHostException e)
                 {
@@ -133,7 +133,7 @@ public class getBusinessData implements Runnable
 
                 try
                 {
-                    textData = getReviewData.getReviews(db, business1.getBusinessid()) + " " + getTipData.getTips(db, business1.getBusinessid());
+                    textData = getReviewData.getReviews(db, business1.getBusinessid());
                 }
                 catch (UnknownHostException e)
                 {
